@@ -1,24 +1,6 @@
 import React from 'react'
 
-// import { isoDate } from '../../../common/helpers.js'
-// import { graphql, gql } from 'react-apollo'
-// import casual from 'casual'
-
-// import style from './stylesheet.css'
-// let query = gql`
-// query ($student: String) {
-//   attendance(student: $student) {
-//     type
-//     date
-//   }
-// }
-// `
-
-// @graphql(query, {
-//   options: {
-//     variables: { student: window.localStorage.student }
-//   }
-// })
+import style from '../stylesheet.css'
 
 class Component extends React.Component {
   constructor (props) {
@@ -27,17 +9,27 @@ class Component extends React.Component {
     ///// DEBUG ONLY
     this.prop = {}
     this.prop.data = {}
-    this.prop.data.attendance = [{date: '03', type: true}, {date: '04', type: false}, {date: '06', type: true}]
+    this.prop.data.students = []
+    for (let i = 0; i < 10; i++) {
+      this.prop.data.students.push({name: 'joe' + i})
+    }
     //////
   }
 
 
   render () {
     return (
-      <ul>
-      {this.prop.data.attendance.map((attendance) => (
-        <li key={attendance.date} style={{backgroundColor: (attendance.type ? 'red' : 'yellow')}}><p>{attendance.date}</p></li>
-      ))}
+      <ul className={style.attendanceWrapper}>
+        {this.prop.data.students.map((student) => (
+          <li key={student.name} className={style.attendanceRow}>
+            <p>{student.name}</p>
+            <div className={"right " + style.attendanceButtons}>
+              <div className="button button-green">present</div>
+              <div className="button button-yellow">tardy</div>
+              <div className="button button-red">absent</div>
+            </div>
+          </li>
+        ))}
       </ul>
     )
   }

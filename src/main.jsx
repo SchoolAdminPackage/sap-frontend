@@ -12,7 +12,7 @@ import Invalid from './pages/invalid/index.jsx'
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
-window.localStorage.layout = 'student'
+window.localStorage.layout = 'teacher'
 /////////
 
 

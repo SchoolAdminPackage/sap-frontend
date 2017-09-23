@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="49.514877mm"
+   height="73.913239mm"
+   viewBox="0 0 49.514877 73.913239"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="sap.svg"
+   inkscape:version="0.92.2 (unknown)">
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 148.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="210.00001 : 148.5 : 1"
+       inkscape:persp3d-origin="105.00001 : 99 : 1"
+       id="perspective831" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="180.1628"
+     inkscape:cy="11.900959"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-49.143531,-46.98097)">
+    <path
+       style="opacity:1;fill:#c3504d;fill-opacity:1;stroke:none;stroke-width:2.28699994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 98.658408,96.136772 c 0,13.673158 -11.084283,24.757438 -24.757439,24.757438 -13.673155,0 -24.757438,-11.08428 -24.757438,-24.757438 0,-6.836578 5.31083,-14.329207 8.290721,-19.490528 2.979889,-5.16132 16.466717,-29.665274 16.466717,-29.665274 0,0 13.486828,24.503953 16.466718,29.665274 2.97989,5.16132 8.290721,12.65395 8.290721,19.490528 z"
+       id="path829"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssscss" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot854"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"><flowRegion
+         id="flowRegion856"><rect
+           id="rect858"
+           width="161.78572"
+           height="43.57143"
+           x="156.07143"
+           y="297.16254" /></flowRegion><flowPara
+         id="flowPara860">СА</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;line-height:1.25;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.41703534"
+       x="56.017582"
+       y="102.28558"
+       id="text864"><tspan
+         sodipodi:role="line"
+         id="tspan862"
+         x="56.017582"
+         y="102.28558"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703534">SAP</tspan></text>
+  </g>
+</svg>

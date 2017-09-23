@@ -9,7 +9,7 @@ class Main extends React.Component {
     super(props)
 
     this.state = {
-      layout: 'grades'
+      layout: 'gradeslk'
     }
   }
 
@@ -20,14 +20,15 @@ class Main extends React.Component {
           <div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div>
           <div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div>
         </div>
-
-        {
-          this.state.layout === 'attendance' ? (
-            <Attendance />
-          ) : (
-            <Grades />
-          )
-        }
+        <div className={style.wrapper}>
+          {
+            this.state.layout === 'attendance' ? (
+              <Attendance />
+            ) : (
+              <Grades />
+            )
+          }
+        </div>
       </div>
     )
   }

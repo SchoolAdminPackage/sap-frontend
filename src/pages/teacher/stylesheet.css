@@ -2,16 +2,20 @@
   border: 2px solid black;
 }
 
-.menuBar * {
+.menuBar > * {
   display: inline-block;
   width: 50%;
   text-align: center;
 }
 
-.course * {
-  display: inline;
+.wrapper {
+  margin: 20px;
 }
 
-.grades * {
-  padding: 5px;
+.attendanceRow * {
+  display: inline-block;
+}
+
+.attendanceButtons * {
+  margin: 0 20px;
 }
