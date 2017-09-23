@@ -1,4 +1,5 @@
 .student__attendance * {
   padding: 10px;
   display: inline-block !important;
+  text-align: left;
 }

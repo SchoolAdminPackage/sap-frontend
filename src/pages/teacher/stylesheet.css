@@ -1,3 +1,15 @@
-.attendanceButtons * {
-  margin: 0 20px;
+.teacher__attendance-row * {
+  display: inline-block;
+}
+
+.teacher__attendance-buttons {
+  float: right;
+}
+
+.teacher__attendance-buttons {
+  margin: 10px;
+}
+
+.teacher__attendance-buttons * {
+  margin-left: 20px;
 }

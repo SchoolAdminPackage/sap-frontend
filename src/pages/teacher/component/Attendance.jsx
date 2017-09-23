@@ -17,11 +17,11 @@ export default class Component extends React.Component {
 
   render () {
     return (
-      <ul>
+      <ul className='teacher__attendance'>
         {this.prop.data.students.map((student) => (
-          <li key={student.name} className='level1'>
+          <li key={student.name} className='teacher__attendance-row'>
             <p>{student.name}</p>
-            <div className={'right attendance-buttons'}>
+            <div className={'teacher__attendance-buttons'}>
               <div className='button button-green'>present</div>
               <div className='button button-yellow'>tardy</div>
               <div className='button button-red'>absent</div>
