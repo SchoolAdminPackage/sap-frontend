@@ -24,13 +24,13 @@ export default class Component extends React.Component {
       <ul>
         {this.prop.data.courses.map((course) => (
             <li key={course.name} className='level1' onClick={() => this.setState({activeCourse: course.name})}>
-              <p className='center'>{course.name}</p>
+              <p className='text-center'>{course.name}</p>
               {
                 this.state.activeCourse === course.name ? (
                   <ul className='level2'>
                     {course.students.map((student) => (
                       <li key={student.firstName + student.lastName} onClick={() => this.setState({activeStudent: student.firstName + student.lastName})}>
-                        <p className='center'>{student.firstName} {student.lastName}</p>
+                        <p className='text-center'>{student.firstName} {student.lastName}</p>
                         {
                           this.state.activeStudent === student.firstName + student.lastName ? (
                             <ul className='level3'>

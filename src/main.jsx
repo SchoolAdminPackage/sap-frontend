@@ -2,16 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import { ApolloClient, ApolloProvider } from 'react-apollo'
 
+import './grid.css'
 import './index.css'
 
 import Student from './pages/student/index.jsx'
 import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'
+import NewSchool from './pages/new-school/index.jsx'
 
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
-window.localStorage.layout = 'student'
+// window.localStorage.layout = 'new-school'
 /////////
 
 
@@ -28,6 +30,9 @@ switch (window.localStorage.layout) {
     break
   case 'invalid':
     Component = Invalid
+    break
+  case 'new-school':
+    Component = NewSchool
     break
 }
 

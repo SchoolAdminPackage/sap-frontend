@@ -2,14 +2,18 @@ import React from 'react'
 
 import Center from '../../component/Center.jsx'
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   render () {
     return (
       <Center>
-        test
+        <img src='media/sap2.svg' style={{width: '100%'}} />
+        <h1 className='button button-red' onClick={this.callback} style={{color: 'white'}}>new school?</h1>
       </Center>
     )
   }
-}
 
-export default Main
+  callback = () => {
+    window.localStorage.layout = 'admin'
+    window.location.reload()
+  }
+}

@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="49.514877mm"
-   height="73.913239mm"
-   viewBox="0 0 49.514877 73.913239"
+   height="66.731689mm"
+   viewBox="0 0 49.514877 66.73169"
    version="1.1"
    id="svg8"
    sodipodi:docname="sap.svg"
@@ -20,10 +20,10 @@
      id="defs2">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 148.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="210.00001 : 148.5 : 1"
-       inkscape:persp3d-origin="105.00001 : 99 : 1"
+       inkscape:vp_x="0 : 148.49999 : 1"
+       inkscape:vp_y="0 : 999.99996 : 0"
+       inkscape:vp_z="210.00001 : 148.49999 : 1"
+       inkscape:persp3d-origin="105.00001 : 98.999997 : 1"
        id="perspective831" />
   </defs>
   <sodipodi:namedview
@@ -33,9 +33,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="180.1628"
-     inkscape:cy="11.900959"
+     inkscape:zoom="2.8"
+     inkscape:cx="42.945042"
+     inkscape:cy="135.98078"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -64,13 +64,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-49.143531,-46.98097)">
+     transform="translate(-49.143531,-54.162518)">
     <path
        style="opacity:1;fill:#c3504d;fill-opacity:1;stroke:none;stroke-width:2.28699994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 98.658408,96.136772 c 0,13.673158 -11.084283,24.757438 -24.757439,24.757438 -13.673155,0 -24.757438,-11.08428 -24.757438,-24.757438 0,-6.836578 5.31083,-14.329207 8.290721,-19.490528 2.979889,-5.16132 16.466717,-29.665274 16.466717,-29.665274 0,0 13.486828,24.503953 16.466718,29.665274 2.97989,5.16132 8.290721,12.65395 8.290721,19.490528 z"
+       d="m 98.658408,96.136772 c 0,13.673158 -11.084283,24.757438 -24.757439,24.757438 -13.673155,0 -24.757438,-11.08428 -24.757438,-24.757438 0,-6.836578 5.310831,-14.329207 8.290721,-19.490528 2.97989,-5.161321 16.466717,-22.483726 16.466717,-22.483726 0,0 13.486828,17.322405 16.466718,22.483726 2.97989,5.16132 8.290721,12.65395 8.290721,19.490528 z"
        id="path829"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssscss" />
+       sodipodi:nodetypes="ssszcss" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot854"
