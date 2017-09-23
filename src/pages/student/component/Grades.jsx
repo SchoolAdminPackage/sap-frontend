@@ -25,6 +25,21 @@ import style from '../stylesheet.css'
 //   }
 // })
 
+
+function calcGrade(assignments, course) {
+  let x = 0
+  let amt = 0
+  for (let i = 0; i < assignments.length; i++) {
+    if (assignments[i].course == course.name) {
+      x += assignments[i].percent
+      amt++
+    }
+  }
+  x = x / amt
+  return x
+}
+
+
 class Component extends React.Component {
   constructor (props) {
     super(props)
@@ -36,51 +51,16 @@ class Component extends React.Component {
     this.prop.data.courses = [{name: 'math'}, {name: 'english'}, {name: 'cs'}]
     //////
   }
-  
-  
+
+
 
   render () {
-  	function calcGrade(assignments, course) {
-                      		let x = 0
-                      		let amt = 0
-                      		for(let i = 0; i<assignments.length; i++) {
-                      			if(assignments[i].course == course.name) {
-                      				x += assignments[i].percent
-                      				amt++
-                      			}
-                      		}
-
-                      		x = x/amt
-                      		return x
-                      	}
-                      	
     return (
       <ul className={style.grades}>
         {this.prop.data.courses.map((course) => (
             <li key={course.name} className={style.course}>
-              <p>{course.name}</p>
-              <ul>
-                {this.prop.data.assignments.map((assignment) => (
-                  assignment.course === course.name ? (
-                    <li key={assignment.name}>
-                      <p>{assignment.name}</p>
-                      <p>here -> {
-
-                      	calcGrade(this.prop.data.assignments,course)
-
-                      	 
-                      	
-
-                      	
-                      	
-                      }
-
-
-                       here</p>
-                    </li>
-                  ) : ''
-                ))}
-              </ul>
+              <p className={style.leftPane}>{course.name}</p>
+              <p className={style.rightPane}>{calcGrade(this.prop.data.assignments, course)}</p>
             </li>
         ))}
       </ul>

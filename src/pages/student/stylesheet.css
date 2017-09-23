@@ -19,7 +19,11 @@
 }
 
 .course * {
-  display: inline;
+  display: inline-block;
+  text-align: right;
+}
+
+.course {
 }
 
 .grades * {
@@ -30,4 +34,9 @@
   display: inline-block;
   font-size: 2rem;
   padding: 10px;
+}
+
+.leftPane {
+  border-right: 3px solid black;
+  width: 50%;
 }
