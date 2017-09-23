@@ -9,11 +9,12 @@ import Student from './pages/student/index.jsx'
 import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'
 import NewSchool from './pages/new-school/index.jsx'
+import SchoolSetup from './pages/school-setup/index.jsx'
 
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
-// window.localStorage.layout = 'new-school'
+window.localStorage.layout = 'student'
 /////////
 
 
@@ -33,6 +34,9 @@ switch (window.localStorage.layout) {
     break
   case 'new-school':
     Component = NewSchool
+    break
+  case 'school-setup':
+    Component = SchoolSetup
     break
 }
 

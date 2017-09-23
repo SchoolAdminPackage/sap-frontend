@@ -12,8 +12,13 @@ html {
   /* color: white; */
 }
 
-h1 {
+h1, h2, h3 {
   text-align: center;
+}
+
+h3 {
+  font-weight: normal;
+  font-style: italic;
 }
 
 .button {
@@ -21,6 +26,7 @@ h1 {
   transition-duration: .3s;
   padding: 5px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, .2);
+  color: white;
 }
 
 .button:hover {

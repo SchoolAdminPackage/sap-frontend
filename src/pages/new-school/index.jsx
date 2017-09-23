@@ -13,7 +13,7 @@ export default class Main extends React.Component {
   }
 
   callback = () => {
-    window.localStorage.layout = 'admin'
+    window.localStorage.layout = 'school-setup'
     window.location.reload()
   }
 }
