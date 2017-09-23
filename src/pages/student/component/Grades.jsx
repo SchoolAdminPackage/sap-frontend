@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function calcGrade(assignments, course) {
   let x = 0
   let amt = 0
@@ -13,23 +14,66 @@ function calcGrade(assignments, course) {
   return x
 }
 
+// import { isoDate } from '../../../common/helpers.js'
+// import { graphql, gql } from 'react-apollo'
+// import casual from 'casual'
+
+import style from '../stylesheet.css'
+// let query = gql`
+// query ($student: String) {
+//   grades(student: $student) {
+//     course
+//     name
+//     percent
+//   }
+//
+//   courseMemberships(student: $student) {
+//     name
+//   }
+// }
+// `
+
+// @graphql(query, {
+//   options: {
+//     variables: { student: window.localStorage.student }
+//   }
+// })
+
+
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
+
+
+
 
 export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    ///// DEBUG ONLY
-    this.prop = {}
-    this.prop.data = {}
-    this.prop.data.assignments = [{course: 'math', name: 'test', percent: 20}, {course: 'math', name: 'test2', percent: 30}, {course: 'english', percent: 59, name: 'quiz'}, {course: 'cs', percent: 99, name: 'project'}]
-    this.prop.data.courses = [{name: 'math'}, {name: 'english'}, {name: 'cs'}]
-    //////
+    const main = this;
+    
+    //FETCH WITH STUDENT THINGY
+    fetch(``)
+    //^^^^^^^
+<<<<<<< Updated upstream
 
-    this.state = {
-      activeCourse: ''
-    }
-  }
+=======
+>>>>>>> Stashed changes
 
+    .then( function(response) {
+      return response.json();
+    })
+    .then( function(data) {
+      main.setState({
+      	activeCourse: '',
+      	assignments: data.assignments,
+      	pointsEarned: data.pointsEarned,
+      	pointsTotal: data.pointsTotal,
+      	courses: data.courses
+
+<<<<<<< Updated upstream
   render () {
     return (
       <ul>
@@ -41,6 +85,40 @@ export default class Component extends React.Component {
                 this.state.activeCourse === course.name ? (
                   <ul className='level2'>
                     {this.prop.data.assignments.map((assignment) => (
+
+    .then( function(response) {
+      return response.json();
+    })
+    .then( function(data) {
+      main.setState({
+      	activeCourse: '',
+      	assignments: data.assignments,
+      	pointsEarned: data.pointsEarned,
+      	pointsTotal: data.pointsTotal,
+      	courses: data.courses
+
+=======
+>>>>>>> Stashed changes
+      });
+    })
+    
+  }
+
+  render () {
+    return (
+      <ul className={style.grades}>
+        {this.state.courses.map((course) => (
+            <li key={course.name} className={style.course} onClick={() => this.pullUp(course)}>
+              <p className={style.leftPane}>{course.name}</p>
+              <p className={style.rightPane}>{calcGrade(this.prop.data.assignments, course)}</p>
+              {
+                this.state.activeCourse === course.name ? (
+                  <ul className={style.courseBreakdown}>
+                    {this.state.assignments.map(assignment) => (
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
                       assignment.course === course.name ? (
                         <li key={assignment.name}>
                           <p className={'leftPane'}>{assignment.name}</p>
@@ -56,4 +134,33 @@ export default class Component extends React.Component {
       </ul>
     )
   }
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+  pullUp = (course) => {
+  	if (this.state.activeCourse == null) this.state.activeCourse=''
+  	console.log(this.state.activeCourse)
+		if (course.name == this.state.activeCourse) {
+			this.setState({activeCourse: ''})
+		}
+		else {
+			this.setState({activeCourse: course.name})
+		}
+	}
+}
+
+export default Component
+
+  pullUp = (course) => {
+  	if (this.state.activeCourse == null) this.state.activeCourse=''
+  	console.log(this.state.activeCourse)
+		if (course.name == this.state.activeCourse) {
+			this.setState({activeCourse: ''})
+		}
+		else {
+			this.setState({activeCourse: course.name})
+		}
+	}
 }
