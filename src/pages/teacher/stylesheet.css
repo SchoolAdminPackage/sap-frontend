@@ -1,0 +1,17 @@
+.menuBar {
+  border: 2px solid black;
+}
+
+.menuBar * {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.course * {
+  display: inline;
+}
+
+.grades * {
+  padding: 5px;
+}

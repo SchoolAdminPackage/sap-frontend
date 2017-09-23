@@ -25,3 +25,9 @@
 .grades * {
   padding: 5px;
 }
+
+.attendanceWrapper * {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 10px;
+}
