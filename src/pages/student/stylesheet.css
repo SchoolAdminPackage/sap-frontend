@@ -7,3 +7,8 @@
 .student__grades li {
   text-align: left;
 }
+
+.student__attendance_day {
+  color: white;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, .2);
+}

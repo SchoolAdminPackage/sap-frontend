@@ -19,7 +19,7 @@ export default class Component extends React.Component {
     return (
       <ul className={'student__attendance'}>
         {this.prop.data.attendance.map((attendance) => (
-          <li key={attendance.date} ><p style={{backgroundColor: (attendance.type ? 'red' : 'yellow')}}>{attendance.date}</p></li>
+          <li key={attendance.date} ><p style={{backgroundColor: (attendance.type ? '#b5525f' : '#f1c40f')}} className='student__attendance_day'>{attendance.date}</p></li>
         ))}
       </ul>
     )
