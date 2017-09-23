@@ -1,11 +1,13 @@
 import React from 'react'
 
+import Center from '../../component/Center.jsx'
+
 class Main extends React.Component {
   render () {
     return (
-      <div>
+      <Center>
         test
-      </div>
+      </Center>
     )
   }
 }

@@ -32,7 +32,7 @@ export default class Component extends React.Component {
 
   render () {
     return (
-      <ul>
+      <ul className='student__grades'>
         {this.prop.data.courses.map((course) => (
             <li key={course.name} className={'level1'} onClick={() => this.setState({activeCourse: course.name})}>
               <p className='leftPane'>{course.name}</p>

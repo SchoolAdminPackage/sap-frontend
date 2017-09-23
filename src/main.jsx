@@ -11,7 +11,7 @@ import Admin from './pages/admin/index.jsx'
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
-window.localStorage.layout = 'teacher'
+window.localStorage.layout = 'student'
 /////////
 
 

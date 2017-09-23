@@ -3,3 +3,7 @@
   display: inline-block !important;
   text-align: left;
 }
+
+.student__grades li {
+  text-align: left;
+}

@@ -1,0 +1,63 @@
+.col {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.el-2 {
+  flex: 0 0 50%;
+}
+
+.el-3 {
+  flex: 0 0 33.33%;
+}
+
+.el-4 {
+  flex: 0 0 25%;
+}
+
+.el-5 {
+  flex: 0 0 20%;
+}
+
+.el-6 {
+  flex: 0 0 16.67%;
+}
+
+.el-8 {
+  flex: 0 0 12.5%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.horizontal-center {
+  margin: 0 auto;
+  display: block;
+}
