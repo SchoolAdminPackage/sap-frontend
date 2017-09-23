@@ -1,31 +1,5 @@
 import React from 'react'
 
-// import { isoDate } from '../../../common/helpers.js'
-// import { graphql, gql } from 'react-apollo'
-// import casual from 'casual'
-
-import style from '../stylesheet.css'
-// let query = gql`
-// query ($student: String) {
-//   grades(student: $student) {
-//     course
-//     name
-//     percent
-//   }
-//
-//   courseMemberships(student: $student) {
-//     name
-//   }
-// }
-// `
-
-// @graphql(query, {
-//   options: {
-//     variables: { student: window.localStorage.student }
-//   }
-// })
-
-
 function calcGrade(assignments, course) {
   let x = 0
   let amt = 0
@@ -40,7 +14,7 @@ function calcGrade(assignments, course) {
 }
 
 
-class Component extends React.Component {
+export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
@@ -56,23 +30,21 @@ class Component extends React.Component {
     }
   }
 
-
-
   render () {
     return (
-      <ul className={style.grades}>
+      <ul>
         {this.prop.data.courses.map((course) => (
-            <li key={course.name} className={style.course} onClick={() => this.setState({activeCourse: course.name})}>
-              <p className={style.leftPane}>{course.name}</p>
-              <p className={style.rightPane}>{calcGrade(this.prop.data.assignments, course)}</p>
+            <li key={course.name} className={'level1'} onClick={() => this.setState({activeCourse: course.name})}>
+              <p className='leftPane'>{course.name}</p>
+              <p className='rightPane'>{calcGrade(this.prop.data.assignments, course)}</p>
               {
                 this.state.activeCourse === course.name ? (
-                  <ul className={style.courseBreakdown}>
+                  <ul className='level2'>
                     {this.prop.data.assignments.map((assignment) => (
                       assignment.course === course.name ? (
                         <li key={assignment.name}>
-                          <p className={style.leftPane}>{assignment.name}</p>
-                          <p className={style.rightPane}>{assignment.percent}</p>
+                          <p className={'leftPane'}>{assignment.name}</p>
+                          <p className={'rightPane'}>{assignment.percent}</p>
                         </li>
                       ) : ''
                     ))}
@@ -85,6 +57,3 @@ class Component extends React.Component {
     )
   }
 }
-
-export default Component
-

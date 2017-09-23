@@ -7,7 +7,6 @@ import './index.css'
 import Student from './pages/student/index.jsx'
 import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'
-import Invalid from './pages/invalid/index.jsx'
 
 // const client = new ApolloClient()
 

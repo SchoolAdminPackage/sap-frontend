@@ -25,12 +25,12 @@ module.exports = {
           {
             loader: 'style-loader'
           },
-          {
-            loader: 'css-loader',
-            query: {
-              modules: true
-            }
-          },
+          // {
+          //   loader: 'css-loader',
+          //   query: {
+          //     modules: true
+          //   }
+          // },
           {
             loader: 'postcss-loader',
             options: {

@@ -1,8 +1,6 @@
 import React from 'react'
 
-import style from '../stylesheet.css'
-
-class Component extends React.Component {
+export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
@@ -19,7 +17,7 @@ class Component extends React.Component {
 
   render () {
     return (
-      <ul className={`${style.attendanceWrapper}`}>
+      <ul className={'level1 student__attendance'}>
         {this.prop.data.attendance.map((attendance) => (
           <li key={attendance.date} ><p style={{backgroundColor: (attendance.type ? 'red' : 'yellow')}}>{attendance.date}</p></li>
         ))}
@@ -27,6 +25,3 @@ class Component extends React.Component {
     )
   }
 }
-
-export default Component
-

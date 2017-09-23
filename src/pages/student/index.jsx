@@ -1,26 +1,27 @@
 import React from 'react'
 
-import style from './stylesheet.css'
 import Attendance from './component/Attendance.jsx'
 import Grades from './component/Grades.jsx'
 
-class Main extends React.Component {
+import './stylesheet.css'
+
+export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      layout: 'gradeslk'
+      layout: 'attendance'
     }
   }
 
   render () {
     return (
       <div>
-        <div className={style.menuBar}>
-          <div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div>
-          <div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div>
+        <div className='menuBar'>
+          <div><div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div></div>
+          <div><div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div></div>
         </div>
-        <div className={style.wrapper}>
+        <div className='wrapper'>
           {
             this.state.layout === 'attendance' ? (
               <Attendance />
@@ -33,5 +34,3 @@ class Main extends React.Component {
     )
   }
 }
-
-export default Main

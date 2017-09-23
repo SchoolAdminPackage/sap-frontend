@@ -1,10 +1,6 @@
 import React from 'react'
 
-// import casual from 'casual'
-
-import style from '../stylesheet.css'
-
-class Component extends React.Component {
+export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
@@ -25,23 +21,23 @@ class Component extends React.Component {
 
   render () {
     return (
-      <ul className={style.courseWrapper}>
+      <ul>
         {this.prop.data.courses.map((course) => (
-            <li key={course.name} className={style.course} onClick={() => this.setState({activeCourse: course.name})}>
+            <li key={course.name} className='level1' onClick={() => this.setState({activeCourse: course.name})}>
               <p className='center'>{course.name}</p>
               {
                 this.state.activeCourse === course.name ? (
-                  <ul className={style.courseBreakdown}>
+                  <ul className='level2'>
                     {course.students.map((student) => (
                       <li key={student.firstName + student.lastName} onClick={() => this.setState({activeStudent: student.firstName + student.lastName})}>
                         <p className='center'>{student.firstName} {student.lastName}</p>
                         {
                           this.state.activeStudent === student.firstName + student.lastName ? (
-                            <ul className={style.gradesWrapper}>
+                            <ul className='level3'>
                               {this.prop.data.grades.map((grade) => (
-                                <li key={grade.name} className={style.gradeRow}>
-                                  <p className={style.leftPane}>{grade.name}</p>
-                                  <p className={style.rightPane}>{grade.percent}</p>
+                                <li key={grade.name} className='gradeRow'>
+                                  <p className='leftPanel'>{grade.name}</p>
+                                  <p className='rightPanel'>{grade.percent}</p>
                                 </li>
                               ))}
                             </ul>
@@ -58,6 +54,4 @@ class Component extends React.Component {
     )
   }
 }
-
-export default Component
 

@@ -1,8 +1,6 @@
 import React from 'react'
 
-import style from '../stylesheet.css'
-
-class Component extends React.Component {
+export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
@@ -19,14 +17,14 @@ class Component extends React.Component {
 
   render () {
     return (
-      <ul className={style.attendanceWrapper}>
+      <ul>
         {this.prop.data.students.map((student) => (
-          <li key={student.name} className={style.attendanceRow}>
+          <li key={student.name} className='level1'>
             <p>{student.name}</p>
-            <div className={"right " + style.attendanceButtons}>
-              <div className="button button-green">present</div>
-              <div className="button button-yellow">tardy</div>
-              <div className="button button-red">absent</div>
+            <div className={'right attendance-buttons'}>
+              <div className='button button-green'>present</div>
+              <div className='button button-yellow'>tardy</div>
+              <div className='button button-red'>absent</div>
             </div>
           </li>
         ))}
@@ -34,6 +32,3 @@ class Component extends React.Component {
     )
   }
 }
-
-export default Component
-

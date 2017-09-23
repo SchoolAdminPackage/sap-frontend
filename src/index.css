@@ -7,36 +7,87 @@ html {
   font-family: Montserrat;
 }
 
-:global .button {
+.button {
   border-radius: 10px;
   transition-duration: .3s;
   padding: 5px;
 }
 
-:global .button:hover {
+.button:hover {
   filter: brightness(1.3);
 }
 
-:global .button:active {
+.button:active {
 
 }
 
-:global .button-green {
+.button-green {
   background-color: #27ae60;
 }
 
-:global .button-yellow {
+.button-yellow {
   background-color: #f1c40f;
 }
 
-:global .button-red {
+.button-red {
   background-color: #f76666;
 }
 
-:global .right {
+.right {
   float: right;
 }
 
-:global .center {
+.center {
   text-align: center;
+}
+
+.menuBar {
+  border: 2px solid black;
+  float: center;
+
+}
+
+.menuBar * {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 20px;
+}
+
+.level1, .level1 * {
+  text-align: center;
+}
+
+.level1 * {
+  display: inline-block;
+}
+
+.level1 ul, .level1 li {
+  display: block;
+}
+
+.level2 {
+  border: 1px solid gray;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.level3 {
+  border: 1px solid gray;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.leftPane {
+  border-right: 3px solid black;
+  width: 50%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.rightPane {
+  padding-left: 10px;
 }
