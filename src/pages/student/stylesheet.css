@@ -40,3 +40,13 @@
   border-right: 3px solid black;
   width: 50%;
 }
+
+.courseBreakdown {
+  display: block;
+  border: 1px solid grey;
+}
+
+.courseBreakdown > * {
+  width: 100%;
+  text-align: left;
+}

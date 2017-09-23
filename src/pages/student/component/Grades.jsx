@@ -50,6 +50,10 @@ class Component extends React.Component {
     this.prop.data.assignments = [{course: 'math', name: 'test', percent: 20}, {course: 'math', name: 'test2', percent: 30}, {course: 'english', percent: 59, name: 'quiz'}, {course: 'cs', percent: 99, name: 'project'}]
     this.prop.data.courses = [{name: 'math'}, {name: 'english'}, {name: 'cs'}]
     //////
+
+    this.state = {
+      activeCourse: ''
+    }
   }
 
 
@@ -58,9 +62,23 @@ class Component extends React.Component {
     return (
       <ul className={style.grades}>
         {this.prop.data.courses.map((course) => (
-            <li key={course.name} className={style.course}>
+            <li key={course.name} className={style.course} onClick={() => this.setState({activeCourse: course.name})}>
               <p className={style.leftPane}>{course.name}</p>
               <p className={style.rightPane}>{calcGrade(this.prop.data.assignments, course)}</p>
+              {
+                this.state.activeCourse === course.name ? (
+                  <ul className={style.courseBreakdown}>
+                    {this.prop.data.assignments.map((assignment) => (
+                      assignment.course === course.name ? (
+                        <li key={assignment.name}>
+                          <p className={style.leftPane}>{assignment.name}</p>
+                          <p className={style.rightPane}>{assignment.percent}</p>
+                        </li>
+                      ) : ''
+                    ))}
+                  </ul>
+                ) : ''
+              }
             </li>
         ))}
       </ul>
