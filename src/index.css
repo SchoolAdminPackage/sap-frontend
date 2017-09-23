@@ -1,7 +1,3 @@
 :global html, :global body, :global #app, :global [data-reactroot] {
   height: 100%;
 }
-
-:global .row-2 * {
-  width: 50%;
-}

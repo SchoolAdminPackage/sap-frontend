@@ -12,10 +12,11 @@ class Main extends React.Component {
       layout: 'attendance'
     }
   }
+
   render () {
     return (
       <div>
-        <div className={`row-2 ${style.menuBar}`}>
+        <div className={style.menuBar}>
           <div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div>
           <div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div>
         </div>
