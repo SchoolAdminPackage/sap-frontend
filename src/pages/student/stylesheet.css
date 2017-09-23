@@ -10,15 +10,18 @@
   text-align: center;
 }
 
+
 .attenBox {
 	list-style: none;
 	width:50%;
-	style: inline-block;
+	display: inline-block;
 	text-align: center;
-
 }
 
-.columns {
-	
-	display: inline-block;	
+.course * {
+  display: inline;
+}
+
+.grades * {
+  padding: 5px;
 }
