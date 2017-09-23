@@ -4,7 +4,7 @@ import React from 'react'
 // import { graphql, gql } from 'react-apollo'
 // import casual from 'casual'
 
-// import style from './stylesheet.css'
+import style from '../stylesheet.css'
 // let query = gql`
 // query myQuery($student: String) {
 //   grades(student: $student) {
@@ -39,9 +39,9 @@ class Component extends React.Component {
 
   render () {
     return (
-      <ul>
+      <ul className={style.grades}>
         {this.prop.data.courses.map((course) => (
-            <li key={course.name}>
+            <li key={course.name} className={style.course}>
               <p>{course.name}</p>
               <ul>
                 {this.prop.data.grades.map((grade) => (

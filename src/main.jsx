@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import { ApolloClient, ApolloProvider } from 'react-apollo'
 
+import './index.css'
+
 import Student from './pages/student/index.jsx'
 import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'

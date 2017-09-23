@@ -1,3 +1,4 @@
-:global html, :global body, :global #app, :global [data-reactroot] {
-  height: 100%;
+ul {
+  list-style: none;
+  padding-left: 0;
 }
