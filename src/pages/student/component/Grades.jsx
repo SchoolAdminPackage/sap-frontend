@@ -6,12 +6,15 @@ function calcGrade(grades, course) {
   for (let grade of grades) {
     if (grade.course === course) {
       totalPoints += grade.pointsTotal
-      earnedPoints += grade.earnedPoints
+      earnedPoints += grade.pointsEarned
     }
   }
-  return earnedPoints / totalPoints
+  return calcPercent(earnedPoints, totalPoints)
 }
 
+function calcPercent(earnedPoints, totalPoints) {
+  return earnedPoints / totalPoints * 100 + '%'
+}
 
 import style from '../stylesheet.css'
 
@@ -65,7 +68,7 @@ export default class Component extends React.Component {
                     grade.course === course ? (
                       <li key={grade.title}>
                         <p className='leftPane'>{grade.title}</p>
-                        <p className='rightPane'>{grade.percent}</p>
+                        <p className='rightPane'>{calcPercent(grade.pointsEarned, grade.pointsTotal)}</p>
                       </li>
                     ) : ''
                   ))}
