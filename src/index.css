@@ -36,3 +36,7 @@ html {
 :global .right {
   float: right;
 }
+
+:global .center {
+  text-align: center;
+}

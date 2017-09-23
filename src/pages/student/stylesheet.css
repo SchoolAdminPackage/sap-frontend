@@ -24,7 +24,6 @@
 
 .course * {
   display: inline-block;
-  text-align: right;
 }
 
 .course {
@@ -43,6 +42,7 @@
 .leftPane {
   border-right: 3px solid black;
   width: 50%;
+  text-align: right;
 }
 
 .courseBreakdown {
