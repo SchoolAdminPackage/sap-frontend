@@ -1,5 +1,5 @@
 import React from 'react'
-
+import style from '../stylesheet.css'
 import { isoDate } from '../../../common/helpers.js'
 import { graphql, gql } from 'react-apollo'
 // import casual from 'casual'
@@ -34,11 +34,13 @@ class Component extends React.Component {
 
   render () {
     return (
-      <ul>
+      <div className={`${style.wrapper}`}>
+      <ul className={`${style.columns}`}>
       {this.prop.data.attendance.map((attendance) => (
-        <li key={attendance.date} style={{backgroundColor: (attendance.type ? 'red' : 'yellow')}}><p>{attendance.date}</p></li>
+        <li className={`${style.attenBox}`} key={attendance.date} ><p style={{backgroundColor: (attendance.type ? 'red' : 'yellow'), width: '50px', top:'0px'}}>{attendance.date}</p></li>
       ))}
       </ul>
+      </div>
     )
   }
 }
