@@ -21,10 +21,23 @@ h3 {
   font-style: italic;
 }
 
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 input, button {
   border: 0;
   font-family: Montserrat;
+}
+
+
+input:focus, button:focus {
+  outline: 0;
+}
+
+input::placeholder {
+  color: white;
 }
 
 .element, .elementl, .button, .buttonl {
