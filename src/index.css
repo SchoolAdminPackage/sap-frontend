@@ -24,6 +24,7 @@ h3 {
 
 input, button {
   border: 0;
+  font-family: Montserrat;
 }
 
 .element, .elementl, .button, .buttonl {

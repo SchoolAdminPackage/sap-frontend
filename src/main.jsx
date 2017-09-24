@@ -11,11 +11,9 @@ import NewSchool from './pages/new-school/index.jsx'
 import SchoolSetup from './pages/school-setup/index.jsx'
 import Login from './pages/login/index.jsx'
 
-///////// DEBUG ONLY
-// window.localStorage.layout = 'student'
-// window.localStorage.layout = 'student'
-/////////
-
+if (!window.location.layout) {
+  window.location.layout = 'login'
+}
 
 let Component
 switch (window.localStorage.layout) {
