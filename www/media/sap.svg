@@ -33,11 +33,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="42.945042"
-     inkscape:cy="135.98078"
+     inkscape:zoom="1.979899"
+     inkscape:cx="17.791248"
+     inkscape:cy="99.785624"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="text864"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1053"
@@ -82,16 +82,26 @@
            height="43.57143"
            x="156.07143"
            y="297.16254" /></flowRegion><flowPara
-         id="flowPara860">СА</flowPara></flowRoot>    <text
-       xml:space="preserve"
+         id="flowPara860">СА</flowPara></flowRoot>    <g
+       aria-label="SAP"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;line-height:1.25;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.41703534"
-       x="56.017582"
-       y="102.28558"
-       id="text864"><tspan
-         sodipodi:role="line"
-         id="tspan862"
-         x="56.017582"
-         y="102.28558"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703534">SAP</tspan></text>
+       id="text864"
+       transform="translate(0.52916667)">
+      <path
+         d="m 65.85034,93.611248 c 0,-2.135221 -1.718186,-3.836725 -3.853407,-3.836725 -2.135221,0 -3.836725,1.718186 -3.836725,3.853407 0,2.135221 1.701504,3.836725 3.836725,3.836725 0.517124,0 0.950841,0.433717 0.950841,0.950841 0,0.517123 -0.433717,0.934159 -0.950841,0.934159 -0.517124,0 -0.934159,-0.417036 -0.934159,-0.950841 h -2.919248 c 0,2.201946 1.718186,3.886766 3.853407,3.886766 2.135221,0 3.853407,-1.7015 3.853407,-3.836722 0,-0.917477 -0.300266,-1.751548 -0.834071,-2.418805 -0.70062,-0.900796 -1.801593,-1.484645 -3.019336,-1.484645 -0.517124,0 -0.934159,-0.417036 -0.934159,-0.93416 0,-0.517123 0.417035,-0.95084 0.934159,-0.95084 0.517124,0 0.950841,0.433717 0.950841,0.95084 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703534"
+         id="path927"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 70.052202,102.28558 0.750663,-1.63478 h 5.121194 l 0.767345,1.63478 h 3.286239 L 74.089104,89.774523 h -1.484646 l -5.838495,12.511057 z m 3.319601,-7.156323 1.267787,2.752433 h -2.552256 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703534"
+         id="path929"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 84.656756,92.543638 h 2.035132 c 1.000885,0 1.801593,0.800708 1.801593,1.801593 0,1.000884 -0.800708,1.784911 -1.801593,1.784911 h -2.035132 z m -3.286239,9.741942 h 3.286239 v -3.319598 h 2.051813 c 2.485531,0 4.537345,-2.068495 4.537345,-4.587389 0,-2.535574 -2.068495,-4.60407 -4.60407,-4.60407 h -5.271327 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.68141365px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703534"
+         id="path931"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>
