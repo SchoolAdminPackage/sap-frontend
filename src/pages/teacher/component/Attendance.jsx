@@ -31,6 +31,17 @@ export default class Component extends React.Component {
     }
   }
 
+  present = (firstName, lastName) => {
+
+  }
+  
+  tardy = (firstName, lastName) => {
+    
+  }
+
+  absent = (firstName, lastName) => {
+    
+  }
 
   render () {
     return (
@@ -39,9 +50,9 @@ export default class Component extends React.Component {
           <li key={student.id} className='teacher__attendance-row'>
             <p>{student.firstname} {student.lastname}</p>
             <div className={'teacher__attendance-buttons'}>
-              <div className='button green'>present</div>
-              <div className='button yellow'>tardy</div>
-              <div className='button red'>absent</div>
+              <div className='button green' onClick={() => this.present(student.firstname,student.lastname)}>present</div>
+              <div className='button yellow' onClick={() => this.tardy(student.firstname, student.lastname)}>tardy</div>
+              <div className='button red' onClick={() => this.absent(student.firstname, student.lastname)}>absent</div>
             </div>
           </li>
         ))}
