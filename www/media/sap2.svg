@@ -33,11 +33,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="586.8448"
-     inkscape:cy="-392.38921"
+     inkscape:zoom="7.919596"
+     inkscape:cx="48.854724"
+     inkscape:cy="84.769713"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="text864-1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1053"
@@ -91,17 +91,25 @@
        cx="110.94263"
        cy="-126.68021"
        r="16.252975" />
-    <text
-       xml:space="preserve"
+    <g
+       aria-label="SAP"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61792183px;line-height:1.25;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.41703531"
-       x="102.08173"
-       y="-123.0705"
-       id="text864-1"><tspan
-         sodipodi:role="line"
-         id="tspan862-3"
-         x="102.08173"
-         y="-123.0705"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61792183px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703531">SAP</tspan></text>
+       id="text864-1">
+      <path
+         d="m 106.61476,-127.55182 c 0,-1.1031 -0.88765,-1.98212 -1.99074,-1.98212 -1.10309,0 -1.98212,0.88764 -1.98212,1.99074 0,1.10309 0.87903,1.98212 1.98212,1.98212 0.26716,0 0.49122,0.22406 0.49122,0.49122 0,0.26715 -0.22406,0.4826 -0.49122,0.4826 -0.26715,0 -0.4826,-0.21545 -0.4826,-0.49122 h -1.50814 c 0,1.13757 0.88765,2.00798 1.99074,2.00798 1.10309,0 1.99074,-0.87903 1.99074,-1.98213 0,-0.47398 -0.15512,-0.90488 -0.4309,-1.24959 -0.36195,-0.46537 -0.93073,-0.767 -1.55984,-0.767 -0.26715,0 -0.4826,-0.21545 -0.4826,-0.4826 0,-0.26716 0.21545,-0.49122 0.4826,-0.49122 0.26716,0 0.49122,0.22406 0.49122,0.49122 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61792183px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703531"
+         id="path823" />
+      <path
+         d="m 109.22766,-123.0705 0.38781,-0.84456 h 2.6457 l 0.39642,0.84456 h 1.69773 l -3.04212,-6.46344 h -0.767 l -3.01627,6.46344 z m 1.71497,-3.69709 0.65496,1.42196 h -1.31854 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61792183px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703531"
+         id="path825"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 117.13304,-128.10337 h 1.05139 c 0.51708,0 0.93074,0.41366 0.93074,0.93074 0,0.51707 -0.41366,0.92211 -0.93074,0.92211 h -1.05139 z m -1.69773,5.03287 h 1.69773 v -1.71497 h 1.06001 c 1.28407,0 2.34407,-1.06862 2.34407,-2.36993 0,-1.30992 -1.06862,-2.37854 -2.37854,-2.37854 h -2.72327 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61792183px;font-family:'Big John';-inkscape-font-specification:'Big John, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.41703531"
+         id="path827"
+         inkscape:connector-curvature="0" />
+    </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -112,6 +120,6 @@
          id="tspan916"
          x="162.58363"
          y="-11.435863"
-         style="stroke-width:0.26458332"></tspan></text>
+         style="stroke-width:0.26458332" /></text>
   </g>
 </svg>

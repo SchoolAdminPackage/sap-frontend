@@ -28,3 +28,11 @@
 .assignment__student-row > * {
   border-bottom: 2px solid #e8e8e8;
 }
+
+.tardy {
+  background-color: #f6db6f;
+}
+
+.absent {
+  background-color: #ca9098;
+}
