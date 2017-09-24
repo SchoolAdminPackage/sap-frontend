@@ -50,8 +50,13 @@ export default class Component extends React.Component {
       assignments: {},
       students: {},
       activeCourse: '',
-      activeAssignment: ''
+      activeAssignment: '',
+      title: 'Assignment Name'
     }
+  }
+
+  handleChange(event) {
+    this.setState({title: event.target.value})
   }
 
   render () {
@@ -87,6 +92,7 @@ export default class Component extends React.Component {
                       }
                     </li>
                   ))}
+                  <input type='text' id='title' value={this.state.title} onChange={this.handleChange.bind(this)}/>
                   <div className='buttonl' onClick={this.createAssignment}>new assignment</div>
                 </ul>
               ) : ''
@@ -114,12 +120,12 @@ export default class Component extends React.Component {
     }
   }
 
-  createAssignment = () => {
+  createAssignment = (title) => {
     fetch('http://35.3.9.34:8080/create/assignment', {
       method: 'post',
       body: JSON.stringify({
         course: this.state.currentCourse,
-        name: 'sample assignment',
+        name: this.state.title,
         date: 1
       }),
       headers: new Headers({'Content-Type': 'application/json'})
