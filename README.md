@@ -8,7 +8,7 @@ SAP is essentially a core for a modular stack. SAP provides the database and ess
 We built SAP with React on the frontend and Flask/Postgres on the backend! We <3 React
 
 ## Challenges we ran into
-Throughout MHacks we had trouble with a genearl lack of familiarity of the team with React. Additionally, we spent the first 4 or 5 hours of work modelling our project off of GraphQL. Unfortunately, it turns out that Python has terrible support for it, and since our backend engineer was very insistence on using SQLAlchemy we had to abandon it in favor of traditional REST.
+Throughout MHacks we had trouble with a general lack of familiarity of the team with React. Additionally, we spent the first 4 or 5 hours of work modelling our project off of GraphQL. Unfortunately, it turns out that Python has terrible support for it, and since our backend engineer was very insistence on using SQLAlchemy we had to abandon it in favor of traditional REST.
 
 ## Accomplishments that we're proud of
 Over the course of the hackathon we developed a functional React app that interacts with a clear, well-defined backend API. We also engineered a genetic algorithm to determine schedules for an entire school of students.
