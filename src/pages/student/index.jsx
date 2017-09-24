@@ -18,8 +18,8 @@ export default class Component extends React.Component {
     return (
       <div>
         <div className='menuBar'>
-          <div><div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div></div>
-          <div><div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div></div>
+          <div><div className='button green' onClick={() => this.setState({layout: 'attendance'})}>attendance</div></div>
+          <div><div className='button green' onClick={() => this.setState({layout: 'grades'})}>grades</div></div>
         </div>
         <div className='wrapper'>
           {

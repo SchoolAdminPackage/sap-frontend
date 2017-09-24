@@ -3,6 +3,8 @@ import React from 'react'
 import { isoDate } from '../../../common/helpers.js'
 
 export default class Component extends React.Component {
+  state = {attendance: []}
+
   constructor (props) {
     super(props)
 
@@ -15,16 +17,17 @@ export default class Component extends React.Component {
     })
       .then((response) => response.json())
       .then((attendance) => {
-        this.setState({attendance: attendance})
+        this.setState({attendance: attendance.attendanceEvents})
       })
   }
 
 
   render () {
+    console.log(this.state.attendance)
     return (
       <ul className={'student__attendance'}>
         {this.state.attendance.map((attendance) => (
-          <li key={attendance.date}><p style={{backgroundColor: (attendance.type ? '#b5525f' : '#f1c40f')}} className='student__attendance_day'>{isoDate(attendance.date)}</p></li>
+          <li key={attendance.date}><p style={{backgroundColor: (attendance.tardy ? '#f1c40f' : '#b5525f')}} className='student__attendance_day'>{isoDate(attendance.date)}</p></li>
         ))}
       </ul>
     )

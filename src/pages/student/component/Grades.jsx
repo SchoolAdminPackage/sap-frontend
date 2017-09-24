@@ -34,7 +34,7 @@ export default class Component extends React.Component {
         this.setState({grades: grades})
       })
 
-    fetch('http://35.3.9.34:8080/query/allCourses', {
+    fetch('http://35.3.9.34:8080/query/allCoursesForStudent', {
       method: 'post',
       body: JSON.stringify({
         id: 1
@@ -58,7 +58,7 @@ export default class Component extends React.Component {
     return (
       <ul className='student__grades'>
         {this.state.courses.map((course) => (
-          <li key={course} className='level1' onClick={() => this.setState({activeCourse: course})}>
+          <li key={course} className='level1' onClick={() => this.expand(course)}>
             <p className='leftPane'>{course}</p>
             <p className='rightPane'>{calcGrade(this.state.grades, course)}</p>
             {
@@ -81,24 +81,11 @@ export default class Component extends React.Component {
     )
   }
 
-  pullUp = (course) => {
-  	if (this.state.activeCourse == null) this.state.activeCourse=''
-  	console.log(this.state.activeCourse)
-		if (course.name == this.state.activeCourse) {
-			this.setState({activeCourse: ''})
-		}
-		else {
-			this.setState({activeCourse: course.name})
-		}
+  expand = (course) => {
+  	if (this.state.activeCourse === course) {
+      this.setState({activeCourse: ''})
+    } else {
+      this.setState({activeCourse: course})
+    }
 	}
 }
-
-
-
-    // .then( function(data) {
-    //   main.setState({
-    //    activeCourse: '',
-    //    grades: data.grades,
-    //    pointsEarned: data.pointsEarned,
-    //    pointsTotal: data.pointsTotal,
-    //    courses: data.courses
