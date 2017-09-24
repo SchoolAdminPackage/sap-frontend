@@ -10,11 +10,16 @@ import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'
 import NewSchool from './pages/new-school/index.jsx'
 import SchoolSetup from './pages/school-setup/index.jsx'
+import Login from './pages/login/index.jsx'
 
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
+<<<<<<< Updated upstream
 // window.localStorage.layout = 'student'
+=======
+window.localStorage.layout = 'login'
+>>>>>>> Stashed changes
 /////////
 
 
@@ -37,6 +42,9 @@ switch (window.localStorage.layout) {
     break
   case 'school-setup':
     Component = SchoolSetup
+    break
+  case 'login':
+    Component = Login
     break
 }
 

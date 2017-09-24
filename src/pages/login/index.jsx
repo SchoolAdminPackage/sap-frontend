@@ -3,7 +3,9 @@ import React from 'react'
 class Main extends React.Component {
   render () {
     return (
-      <div>
+      <div className='login'>
+      	<input className='username' type='text'></input>
+      	<input className='password' type='text'></input>
         login
       </div>
     )
