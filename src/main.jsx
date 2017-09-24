@@ -10,8 +10,8 @@ import Admin from './pages/admin/index.jsx'
 import SchoolSetup from './pages/school-setup/index.jsx'
 import Login from './pages/login/index.jsx'
 
-if (!window.location.layout) {
-  window.location.layout = 'login'
+if (!window.localStorage.layout) {
+  window.localStorage.layout = 'login'
 }
 
 let Component
