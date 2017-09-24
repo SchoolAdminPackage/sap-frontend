@@ -20,9 +20,9 @@ export default class Component extends React.Component {
           <li key={student.name} className='teacher__attendance-row'>
             <p>{student.name}</p>
             <div className={'teacher__attendance-buttons'}>
-              <div className='button button-green'>present</div>
-              <div className='button button-yellow'>tardy</div>
-              <div className='button button-red'>absent</div>
+              <div className='button green'>present</div>
+              <div className='button yellow'>tardy</div>
+              <div className='button red'>absent</div>
             </div>
           </li>
         ))}

@@ -1,6 +1,6 @@
 .col {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+
+.even {
+  justify-content: space-evenly;
 }
 
 .el-2 {

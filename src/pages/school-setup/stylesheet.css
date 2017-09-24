@@ -2,3 +2,17 @@
   background-color: black;
   padding: 1.5px;
 }
+
+.period__day {
+  transition: border 0s;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.period {
+  text-align: center;
+}
+
+.day_selected {
+  border: 3px solid #D8B00D;
+}

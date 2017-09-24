@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Center from '../../component/Center.jsx'
+import PeriodGui from './component/PeriodGui.jsx'
 import './stylesheet.css'
 
 export default class Main extends React.Component {
@@ -8,12 +9,12 @@ export default class Main extends React.Component {
     super(props)
 
     if (!window.localStorage.setupStage || parseInt(window.localStorage.setupStage) > 3) {
-      window.localStorage.setupStage = 1
+      window.localStorage.setupStage = 3
     }
   }
 
   render () {
-    if (window.localStorage.setupStage === "1") {
+    if (window.localStorage.setupStage === '1') {
       return (
         <Center>
           <div>
@@ -22,18 +23,18 @@ export default class Main extends React.Component {
           </div>
           <br /><br />
 
-          <label className='button button-red'>upload excel document<input type='file' accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel' style={{display: 'none'}} ref={this.callback} /></label>
+          <label className='button red'>upload excel document<input type='file' accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel' style={{display: 'none'}} ref={this.callback} /></label>
 
           <br /><br /><br />
           <h3>excel layout</h3>
-          <div className="row" style={{borderTop: '3px solid black'}}>
+          <div className='row' style={{borderTop: '3px solid black'}}>
             <p>first name</p>
-            <div className="line" />
+            <div className='line' />
             <p>last name</p>
           </div>
         </Center>
       )
-    } else if (window.localStorage.setupStage === "2") {
+    } else if (window.localStorage.setupStage === '2') {
       return (
         <Center>
           <div>
@@ -42,37 +43,19 @@ export default class Main extends React.Component {
           </div>
           <br /><br />
 
-          <label className='button button-red'>upload excel document<input type='file' accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel' style={{display: 'none'}} ref={this.callback} /></label>
+          <label className='button red'>upload excel document<input type='file' accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel' style={{display: 'none'}} ref={this.callback} /></label>
 
           <br /><br /><br />
           <h3>excel layout</h3>
-          <div className="row" style={{borderTop: '3px solid black'}}>
+          <div className='row' style={{borderTop: '3px solid black'}}>
             <p>first name</p>
-            <div className="line" />
+            <div className='line' />
             <p>last name</p>
           </div>
         </Center>
       )
     } else {
-      return (
-        <Center>
-          <div>
-            <h1>Step 3</h1>
-            <h2>Add courses</h2>
-          </div>
-          <br /><br />
-
-          <label className='button button-red'>upload excel document<input type='file' accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel' style={{display: 'none'}} ref={this.callback} /></label>
-
-          <br /><br /><br />
-          <h3>excel layout</h3>
-          <div className="row" style={{borderTop: '3px solid black'}}>
-            <p>first name</p>
-            <div className="line" />
-            <p>last name</p>
-          </div>
-        </Center>
-      )
+      return <Center><PeriodGui onClick={this.dataCallback} /></Center>
     }
   }
 

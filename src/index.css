@@ -21,13 +21,20 @@ h3 {
   font-style: italic;
 }
 
-.button {
+.element, .button {
   border-radius: 10px;
-  transition-duration: .3s;
   padding: 5px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, .2);
   color: white;
-  background-color: #27ae60;
+  margin: auto 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.button {
+  user-select: none;
+  transition-duration: .3s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -39,15 +46,15 @@ h3 {
   box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, .2);
 }
 
-.button-green {
+.green {
   background-color: #27ae60;
 }
 
-.button-yellow {
+.yellow {
   background-color: #f1c40f;
 }
 
-.button-red {
+.red {
   background-color: #b5525f;
 }
 

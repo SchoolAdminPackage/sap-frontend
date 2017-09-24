@@ -14,7 +14,7 @@ import SchoolSetup from './pages/school-setup/index.jsx'
 // const client = new ApolloClient()
 
 ///////// DEBUG ONLY
-window.localStorage.layout = 'student'
+// window.localStorage.layout = 'student'
 /////////
 
 

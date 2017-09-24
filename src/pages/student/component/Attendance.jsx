@@ -6,15 +6,6 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    ///// DEBUG ONLY
-    this.prop = {}
-    this.prop.data = {}
-    this.prop.data.attendance = []
-    for (let i = 0; i < 100; i++) {
-      this.prop.data.attendance.push({date: i, type: true})
-    }
-    //////
-
     fetch('http://35.3.9.34:8080/query/allAttendanceEvents', {
       method: 'post',
       body: JSON.stringify({
