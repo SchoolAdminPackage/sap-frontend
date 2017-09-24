@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { ApolloClient, ApolloProvider } from 'react-apollo'
 
 import './grid.css'
 import './index.css'
@@ -12,14 +11,9 @@ import NewSchool from './pages/new-school/index.jsx'
 import SchoolSetup from './pages/school-setup/index.jsx'
 import Login from './pages/login/index.jsx'
 
-// const client = new ApolloClient()
-
 ///////// DEBUG ONLY
-<<<<<<< Updated upstream
 // window.localStorage.layout = 'student'
-=======
-window.localStorage.layout = 'login'
->>>>>>> Stashed changes
+window.localStorage.layout = 'teacher'
 /////////
 
 
@@ -50,9 +44,6 @@ switch (window.localStorage.layout) {
 
 
 ReactDOM.render(
-  // <ApolloProvider client={client}>
-    <Component />
-  // </ApolloProvider>
-  ,
+  <Component />,
   document.getElementById('app')
 )

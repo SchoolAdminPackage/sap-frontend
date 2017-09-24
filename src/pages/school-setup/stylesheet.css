@@ -4,7 +4,6 @@
 }
 
 .period__day {
-  transition: border 0s;
   padding: 10px;
   border-radius: 0;
 }

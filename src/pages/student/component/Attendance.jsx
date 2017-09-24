@@ -30,7 +30,6 @@ export default class Component extends React.Component {
 
 
   render () {
-    console.log(this.state.attendance)
     return (
       <ul className={'student__attendance'}>
         {this.state.attendance.map((attendance) => (

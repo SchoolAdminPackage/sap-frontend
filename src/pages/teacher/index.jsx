@@ -6,21 +6,17 @@ import Grades from './component/Grades.jsx'
 import './stylesheet.css'
 
 export default class Component extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      layout: 'attendance'
-    }
-  }
+  tabs = ['attendance', 'grades']
+  state = {layout: this.tabs[0]}
 
   render () {
     return (
       <div>
-        <div className='menuBar'>
-          <div><div className='button' onClick={() => this.setState({layout: 'attendance'})}>attendance</div></div>
-          <div><div className='button' onClick={() => this.setState({layout: 'grades'})}>grades</div></div>
-        </div>
+        <ul className='menuBar'>
+          {this.tabs.map((tab) => (
+            <li key={tab}><div className={'button green ' + (this.state.layout === tab ? 'tab_selected' : '')} onClick={() => this.setState({layout: tab})}>{tab}</div></li>
+          ))}
+        </ul>
         <div className='wrapper'>
           {
             this.state.layout === 'attendance' ? (
