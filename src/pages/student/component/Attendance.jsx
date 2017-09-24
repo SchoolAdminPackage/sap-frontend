@@ -18,7 +18,9 @@ export default class Component extends React.Component {
       .then((response) => response.json())
       .then((attendance) => {
 
+
         console.log(attendance)
+
 
         this.setState({attendance: attendance.attendanceEvents})
       })
@@ -32,11 +34,15 @@ export default class Component extends React.Component {
     return (
       <ul className={'student__attendance'}>
         {this.state.attendance.map((attendance) => (
+
           <div>
           <li key={attendance.date}><p style={{backgroundColor: (attendance.tardy ? '#f1c40f' : '#b5525f')}} className='student__attendance_day'>{isoDate(attendance.date)}</p></li>
 
           <li key={attendance.date}><p style={{backgroundColor: (attendance.tardy ? '#b5525f' : '#f1c40f')}} className='student__attendance_day'>{attendance.date}</p></li>
           </div>
+
+          <li key={attendance.date}><p style={{backgroundColor: (attendance.tardy ? '#b5525f' : '#f1c40f')}} className='student__attendance_day'>{attendance.date}</p></li>
+
         ))}
       </ul>
     )
