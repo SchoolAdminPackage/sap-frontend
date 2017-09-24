@@ -6,7 +6,11 @@ export default class Component extends React.Component {
     fetch('http://35.3.9.34:8080/query/allCoursesForTeacher', {
       method: 'post',
       body: JSON.stringify({
+<<<<<<< HEAD
+        teacher_id: 2
+=======
         teacher_id: window.localStorage.id
+>>>>>>> 50ce41b6956b5472d0cf0cea1bae416e3221519c
       }),
       headers: new Headers({'Content-Type': 'application/json'})
     })
@@ -135,12 +139,13 @@ export default class Component extends React.Component {
     fetch('http://35.3.9.34:8080/create/assignment', {
       method: 'post',
       body: JSON.stringify({
-        course: this.state.currentCourse,
+        course: this.state.activeCourse,
         name: this.state.title,
         date: 1
       }),
       headers: new Headers({'Content-Type': 'application/json'})
     })
+    window.location.reload()
   }
 
   inputCallback = (element, studentId, assignmentName, courseName) => {
