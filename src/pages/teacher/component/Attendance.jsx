@@ -4,14 +4,12 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    ///// DEBUG ONLY
     this.prop = {}
     this.prop.data = {}
     this.prop.data.students = []
     for (let i = 0; i < 10; i++) {
       this.prop.data.students.push({name: 'joe' + i})
     }
-    //////
   }
 
 
