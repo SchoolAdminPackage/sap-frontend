@@ -4,23 +4,31 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    fetch('http://35.3.9.34:8080/query/allInCourse', {
+    fetch('http://35.3.9.34:8080/query/allCoursesForTeacher', {
       method: 'post',
       body: JSON.stringify({
-        course: 'Physics'
+        teacher_id: 1
       }),
-      headers: new Headers({"Content-Type": "application/json"})
+      headers: new Headers({'Content-Type': 'application/json'})
     })
       .then((response) => response.json())
-      .then((students) => {
-        console.log(students)
-        this.setState({students: students})
+      .then((courses) => {
+        fetch('http://35.3.9.34:8080/query/allInCourse', {
+          method: 'post',
+          body: JSON.stringify({
+            course: 'Physics'
+          }),
+          headers: new Headers({"Content-Type": "application/json"})
+        })
+          .then((response) => response.json())
+          .then((students) => {
+            this.setState({students: students})
+          })
       })
 
     this.state = {
       students: []
     }
-
   }
 
 
