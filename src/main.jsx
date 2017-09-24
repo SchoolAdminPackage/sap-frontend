@@ -7,12 +7,11 @@ import './index.css'
 import Student from './pages/student/index.jsx'
 import Teacher from './pages/teacher/index.jsx'
 import Admin from './pages/admin/index.jsx'
-import NewSchool from './pages/new-school/index.jsx'
 import SchoolSetup from './pages/school-setup/index.jsx'
 import Login from './pages/login/index.jsx'
 
-if (!window.location.layout) {
-  window.location.layout = 'login'
+if (!window.localStorage.layout) {
+  window.localStorage.layout = 'login'
 }
 
 let Component
@@ -28,9 +27,6 @@ switch (window.localStorage.layout) {
     break
   case 'invalid':
     Component = Invalid
-    break
-  case 'new-school':
-    Component = NewSchool
     break
   case 'school-setup':
     Component = SchoolSetup

@@ -8,10 +8,19 @@ export default class Main extends React.Component {
       <Center>
         <img src='media/sap2.svg' style={{width: '100%'}} />
         <br /><br /><br />
-        <input className='element green' name='username' ref={(element) => this.input = element} />
+        <input placeholder='email' className='element green' name='username' ref={(element) => this.input = element} />
+        <input type='password' placeholder='password' className='element green' name='username' style={{display: 'block'}} />
+        <br />
         <div className='button red' onClick={this.callback}>submit</div>
+        <br /><br /><br />
+        <a onClick={this.newSchoolCallback}>new school? click here.</a>
       </Center>
     )
+  }
+
+  newSchoolCallback = () => {
+    window.localStorage.layout = 'school-setup'
+    window.location.reload()
   }
 
   callback = () => {
