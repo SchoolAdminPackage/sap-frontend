@@ -7,7 +7,8 @@ export default class Main extends React.Component {
     return (
       <Center>
         <img src='media/sap2.svg' style={{width: '100%'}} />
-        <h1 className='button red' onClick={this.callback} style={{color: 'white'}}>new school?</h1>
+        <br /><br /><br />
+        <h1 className='button red' onClick={this.callback}>new school?</h1>
       </Center>
     )
   }

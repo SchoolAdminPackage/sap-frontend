@@ -21,6 +21,11 @@ h3 {
   font-style: italic;
 }
 
+
+input, button {
+  border: 0;
+}
+
 .element, .elementl, .button, .buttonl {
   padding: 5px;
   margin: auto 0;
