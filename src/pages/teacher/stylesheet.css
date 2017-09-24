@@ -24,3 +24,7 @@
 .assignment_students {
   margin-right: 20px;
 }
+
+.assignment__student-row > * {
+  border-bottom: 2px solid #e8e8e8;
+}

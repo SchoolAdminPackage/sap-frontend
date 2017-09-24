@@ -15,3 +15,8 @@
 .day_selected {
   border: 3px solid #D8B00D;
 }
+
+.excel_layout {
+  border-top: 3px solid black;
+  width: 50vw;
+}

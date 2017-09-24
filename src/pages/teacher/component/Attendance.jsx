@@ -20,7 +20,7 @@ export default class Component extends React.Component {
     this.state = {
       students: []
     }
-    
+
   }
 
 
@@ -28,7 +28,7 @@ export default class Component extends React.Component {
     return (
       <ul className='teacher__attendance'>
         {this.state.students.map((student) => (
-          <li key={student.name} className='teacher__attendance-row'>
+          <li key={student.id} className='teacher__attendance-row'>
             <p>{student.firstname} {student.lastname}</p>
             <div className={'teacher__attendance-buttons'}>
               <div className='button green'>present</div>

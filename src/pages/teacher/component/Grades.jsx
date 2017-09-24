@@ -27,6 +27,21 @@ export default class Component extends React.Component {
             .then((students) => {
               console.log(students)
               this.state.students[course.title] = students
+
+              for (let student of students) {
+                fetch('http://35.3.9.34:8080/query/allGrades', {
+                  method: 'post',
+                  body: JSON.stringify({
+                    id: student.id
+                  }),
+                  headers: new Headers({'Content-Type': 'application/json'})
+                })
+                  .then((response) => response.json())
+                  .then((grades) => {
+                    console.log('graddes', grades)
+                    this.state.grades[student.id] = grades
+                  })
+              }
             })
 
           fetch('http://35.3.9.34:8080/query/assignmentsForCourse', {
@@ -49,6 +64,7 @@ export default class Component extends React.Component {
       courses: [],
       assignments: {},
       students: {},
+      grades: {},
       activeCourse: '',
       activeAssignment: '',
       title: 'Assignment Name'
@@ -70,24 +86,20 @@ export default class Component extends React.Component {
             </div>
             {
               this.state.activeCourse === course.title ? (
-                <ul className='level2' style={{textAlign: 'center'}}>
+                <ul className='level2 assignment__student-row' style={{textAlign: 'center'}}>
                   {this.state.assignments[course.title].map((assignment) => (
                     <li key={assignment.name}>
-                      <p style={{textAlign: 'center', width: '100%'}} onClick={() => this.expandAssignment(assignment.name)}>{assignment.name}</p>
+                      <p style={{width: '100%'}} onClick={() => this.expandAssignment(assignment.name)}>{assignment.name}</p>
                       {
                         this.state.activeAssignment === assignment.name ? (
-                          <div className='col' style={{width: '100%'}}>
-                            <div>
-
-                            </div>
-                            <ul className='row'>
-                              {this.state.students[course.title].map((student) => (
-                                <li key={student.id} className='assignment_students'>
-                                  {student.firstname} {student.lastname}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                          <ul className='col' style={{width: '100%', textAlign: 'left'}}>
+                            {this.state.students[course.title].map((student) => (
+                              <li key={student.id} className='assignment_students'>
+                                <p className='leftPane'>{student.firstname} {student.lastname}</p>
+                                <input className='rightPane' type='number' min='0' max='100' ref={(element) => this.inputCallback(element, student.id, assignment.name, course.title)} />
+                              </li>
+                            ))}
+                          </ul>
                         ) : ''
                       }
                     </li>
@@ -130,5 +142,13 @@ export default class Component extends React.Component {
       }),
       headers: new Headers({'Content-Type': 'application/json'})
     })
+  }
+
+  inputCallback = (element, studentId, assignmentName, courseName) => {
+    for (let grade of this.state.grades[studentId]) {
+      if (grade.course === courseName && grade.title === assignmentName) {
+        element.value = grade.pointsEarned / grade.pointsTotal
+      }
+    }
   }
 }
