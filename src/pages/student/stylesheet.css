@@ -4,15 +4,7 @@
   text-align: left;
 }
 
-.student__grades li {
-  text-align: left;
-}
-
 .student__attendance_day {
   color: white;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, .2);
-}
-
-.student__grade_selected {
-  background-color: rgb(250, 250, 250);
 }

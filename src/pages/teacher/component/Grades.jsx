@@ -4,41 +4,125 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    ///// DEBUG ONLY
-    this.prop = {}
-    this.prop.data = {}
-    this.prop.data.courses = [{name: 'math', period: 'A', students: [
-      {firstName: "Anton", lastName: "Outkine"}], assignments: [{name: 'test', date: 'date01', course: 'course', totalPoints: 'total points of ass', description: 'short description'}, {name: 'test', date: 'date01', course: 'course', totalPoints: 'total points of ass', description: 'short description'}, {name: 'test', date: 'date01', course: 'course', totalPoints: 'total points of ass', description: 'short description'}]
-    }]
-    this.prop.data.assignments = 
-    this.prop.data.grades = [{course: 'math', name: 'test', percent: 20}, {course: 'math', name: 'quiz', percent: 40}, {course: 'math', name: 'worksheet', percent: 80}]
-    //////
+    fetch('http://35.3.9.34:8080/query/allCoursesForTeacher', {
+      method: 'post',
+      body: JSON.stringify({
+        teacher_id: 1
+      }),
+      headers: new Headers({'Content-Type': 'application/json'})
+    })
+      .then((response) => response.json())
+      .then((courses) => {
+        console.log(courses)
+        this.setState({courses: courses})
+        for (let course of courses) {
+          fetch('http://35.3.9.34:8080/query/allInCourse', {
+            method: 'post',
+            body: JSON.stringify({
+              course: course.title
+            }),
+            headers: new Headers({'Content-Type': 'application/json'})
+          })
+            .then((response) => response.json())
+            .then((students) => {
+              console.log(students)
+              this.state.students[course.title] = students
+            })
+
+          fetch('http://35.3.9.34:8080/query/assignmentsForCourse', {
+            method: 'post',
+            body: JSON.stringify({
+              course: course.title
+            }),
+            headers: new Headers({'Content-Type': 'application/json'})
+          })
+            .then((response) => response.json())
+            .then((assignments) => {
+              console.log(assignments)
+              this.state.assignments[course.title] = assignments
+            })
+        }
+      })
+
 
     this.state = {
+      courses: [],
+      assignments: {},
+      students: {},
       activeCourse: '',
-      activeStudent: '',
-      activeAss: ''
+      activeAssignment: ''
     }
   }
 
   render () {
+    console.log('asdf', this.state)
     return (
-        <ul>
-          {this.prop.data.courses.map((course) => (
-              <li key={course.name} className='level1' onClick={() => this.setState({activeCourse: course.name})}>
-                <p className='text-center'>{course.name}</p>
-                {
-                    this.state.activeCourse === course.name ? (
-                        <ul className='level2'>
-                        {course.assignments.map((assignment) => (
-                            <li><div className='button' onClick={() => this.setState({activeAss: assignment.name})}></div><p>{assignment.name}</p></li>
-                          ))}
-                        </ul>
-                      ) : ''
-                }
-                </li>
-            ))}
-          </ul>
-      )
+      <ul className='grades'>
+        {this.state.courses.map((course) => (
+          <li key={course.title} className='level1'>
+            <div className={'buttonl ' + (this.state.activeCourse === course.title ? 'grade_selected' : '')} onClick={() => this.expandCourse(course.title)} style={{width: '100%'}}>
+              <p>{course.title}</p>
+            </div>
+            {
+              this.state.activeCourse === course.title ? (
+                <ul className='level2' style={{textAlign: 'center'}}>
+                  {this.state.assignments[course.title].map((assignment) => (
+                    <li key={assignment.name}>
+                      <p style={{textAlign: 'center', width: '100%'}} onClick={() => this.expandAssignment(assignment.name)}>{assignment.name}</p>
+                      {
+                        this.state.activeAssignment === assignment.name ? (
+                          <div className='col' style={{width: '100%'}}>
+                            <div>
+
+                            </div>
+                            <ul className='row'>
+                              {this.state.students[course.title].map((student) => (
+                                <li key={student.id} className='assignment_students'>
+                                  {student.firstname} {student.lastname}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : ''
+                      }
+                    </li>
+                  ))}
+                  <div className='buttonl' onClick={this.createAssignment}>new assignment</div>
+                </ul>
+              ) : ''
+            }
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  expandCourse = (course) => {
+    if (this.state.activeCourse === course) {
+      this.setState({activeCourse: ''})
+    } else {
+      this.setState({activeCourse: course})
+    }
+  }
+
+  expandAssignment = (assignmentName) => {
+    if (this.state.activeAssignment === assignmentName) {
+      this.setState({activeAssignment: ''})
+    } else {
+      console.log(assignmentName)
+      this.setState({activeAssignment: assignmentName})
+    }
+  }
+
+  createAssignment = () => {
+    fetch('http://35.3.9.34:8080/create/assignment', {
+      method: 'post',
+      body: JSON.stringify({
+        course: this.state.currentCourse,
+        name: 'sample assignment',
+        date: 1
+      }),
+      headers: new Headers({'Content-Type': 'application/json'})
+    })
   }
 }

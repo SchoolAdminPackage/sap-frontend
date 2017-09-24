@@ -12,12 +12,15 @@
 
 .teacher__attendance-buttons {
   float: right;
-}
-
-.teacher__attendance-buttons {
   margin: 10px;
 }
 
 .teacher__attendance-buttons * {
   margin-left: 20px;
+  border-radius: 0;
+}
+
+
+.assignment_students {
+  margin-right: 20px;
 }

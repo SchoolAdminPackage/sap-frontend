@@ -13,7 +13,7 @@ import Login from './pages/login/index.jsx'
 
 ///////// DEBUG ONLY
 // window.localStorage.layout = 'student'
-window.localStorage.layout = 'teacher'
+// window.localStorage.layout = 'student'
 /////////
 
 

@@ -25,7 +25,7 @@ h3 {
   padding: 5px;
   margin: auto 0;
   text-align: center;
-  transition: all .5s, border 0s;
+  transition: all .2s, border 0s, box-shadow .1s;
 }
 
 .buttonl, .elementl {
@@ -36,6 +36,10 @@ h3 {
   background-color: rgb(250, 250, 250);
 }
 
+.buttonl:active {
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, .2);
+}
+
 .element, .button {
   border-radius: 10px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, .2);
@@ -43,7 +47,7 @@ h3 {
   display: inline-block;
 }
 
-.button {
+.button, .buttonl {
   user-select: none;
   cursor: pointer;
 }
@@ -140,3 +144,7 @@ h3 {
   background-color: rgb(14,15,30);
 }
 
+
+.grade_selected {
+  background-color: rgb(250, 250, 250);
+}

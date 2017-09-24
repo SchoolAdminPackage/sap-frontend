@@ -55,10 +55,10 @@ export default class Component extends React.Component {
 
   render () {
     return (
-      <ul className='student__grades'>
+      <ul className='grades'>
         {this.state.courses.map((course) => (
           <li key={course} className='level1'>
-            <div className={'buttonl ' + (this.state.activeCourse === course ? 'student__grade_selected' : '')} onClick={() => this.expand(course)} style={{width: '100%'}}>
+            <div className={'buttonl ' + (this.state.activeCourse === course ? 'grade_selected' : '')} onClick={() => this.expand(course)} style={{width: '100%'}}>
               <div>
               <p className='leftPane'>{course}</p>
               <p className='rightPane'>{calcGrade(this.state.grades, course)}</p>
