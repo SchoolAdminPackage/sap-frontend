@@ -22,7 +22,7 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    fetch('http://35.3.9.34:8080/query/allGrades', {
+    fetch('http://66.175.211.152/query/allGrades', {
       method: 'post',
       body: JSON.stringify({
         id: 1
@@ -34,7 +34,7 @@ export default class Component extends React.Component {
         this.setState({grades: grades})
       })
 
-    fetch('http://35.3.9.34:8080/query/allCoursesForStudent', {
+    fetch('http://66.175.211.152/query/allCoursesForStudent', {
       method: 'post',
       body: JSON.stringify({
         id: 1
@@ -54,6 +54,7 @@ export default class Component extends React.Component {
   }
 
   render () {
+    console.log(this.state)
     return (
       <ul className='grades'>
         {this.state.courses.map((course) => (

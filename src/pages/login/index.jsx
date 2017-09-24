@@ -32,7 +32,7 @@ export default class Main extends React.Component {
       string = string.split('@')[0]
     }
     window.localStorage.id = string
-    fetch('http://35.3.9.34:8080/login', {
+    fetch('http://66.175.211.152/login', {
       method: 'post',
       body: JSON.stringify({
         email: string

@@ -3,15 +3,11 @@ import React from 'react'
 export default class Component extends React.Component {
   constructor (props) {
     super(props)
-    fetch('http://35.3.9.34:8080/query/allCoursesForTeacher', {
+    fetch('http://66.175.211.152/query/allCoursesForTeacher', {
       method: 'post',
       body: JSON.stringify({
-<<<<<<< HEAD
-        teacher_id: 2
-=======
         teacher_id: window.localStorage.id
->>>>>>> 50ce41b6956b5472d0cf0cea1bae416e3221519c
-      }),
+        }),
       headers: new Headers({'Content-Type': 'application/json'})
     })
       .then((response) => response.json())
@@ -19,7 +15,7 @@ export default class Component extends React.Component {
         console.log(courses)
         this.setState({courses: courses})
         for (let course of courses) {
-          fetch('http://35.3.9.34:8080/query/allInCourse', {
+          fetch('http://66.175.211.152/query/allInCourse', {
             method: 'post',
             body: JSON.stringify({
               course: course.title
@@ -32,7 +28,7 @@ export default class Component extends React.Component {
               this.state.students[course.title] = students
 
               for (let student of students) {
-                fetch('http://35.3.9.34:8080/query/allGrades', {
+                fetch('http://66.175.211.152/query/allGrades', {
                   method: 'post',
                   body: JSON.stringify({
                     id: student.id
@@ -47,7 +43,7 @@ export default class Component extends React.Component {
               }
             })
 
-          fetch('http://35.3.9.34:8080/query/assignmentsForCourse', {
+          fetch('http://66.175.211.152/query/assignmentsForCourse', {
             method: 'post',
             body: JSON.stringify({
               course: course.title
@@ -70,7 +66,6 @@ export default class Component extends React.Component {
       grades: {},
       activeCourse: '',
       activeAssignment: '',
-      title: 'Assignment Name'
     }
   }
 
@@ -99,7 +94,8 @@ export default class Component extends React.Component {
                             {this.state.students[course.title].map((student) => (
                               <li key={student.id} className='assignment_students'>
                                 <p className='leftPane'>{student.firstname} {student.lastname}</p>
-                                <input className='rightPane' type='number' min='0' max='100' ref={(element) => this.inputCallback(element, student.id, assignment.name, course.title)} />
+                                <input className='rightPane' type='number' min='0' max='100' onChange={(event) => this.grade = event.target.value} />
+                                <div className='buttonl' onClick={() => this.createGrade(student.id, assignment.name, course.title)}>submit</div>
                               </li>
                             ))}
                           </ul>
@@ -107,7 +103,7 @@ export default class Component extends React.Component {
                       }
                     </li>
                   ))}
-                  <input type='text' id='title' value={this.state.title} onChange={this.handleChange.bind(this)}/>
+                  <input type='text' placeholder='name' ref={(element) => this.input = element} />
                   <div className='buttonl' onClick={this.createAssignment}>new assignment</div>
                 </ul>
               ) : ''
@@ -136,23 +132,33 @@ export default class Component extends React.Component {
   }
 
   createAssignment = (title) => {
-    fetch('http://35.3.9.34:8080/create/assignment', {
+    fetch('http://66.175.211.152/create/assignment', {
       method: 'post',
       body: JSON.stringify({
         course: this.state.activeCourse,
-        name: this.state.title,
-        date: 1
+        name: this.input.value,
+        date: Date.now()
       }),
       headers: new Headers({'Content-Type': 'application/json'})
     })
+
     window.location.reload()
   }
 
-  inputCallback = (element, studentId, assignmentName, courseName) => {
-    for (let grade of this.state.grades[studentId]) {
-      if (grade.course === courseName && grade.title === assignmentName) {
-        element.value = grade.pointsEarned / grade.pointsTotal
-      }
-    }
+  createGrade = (studentId, assignmentName, courseName) => {
+    console.log(this.grade)
+    fetch('http://66.175.211.152/create/grade', {
+      method: 'post',
+      body: JSON.stringify({
+        course_title: this.state.activeCourse,
+        id: studentId,
+        title: assignmentName,
+        pointsEarned: this.grade,
+        pointsTotal: 100
+      }),
+      headers: new Headers({'Content-Type': 'application/json'})
+    })
+
+    window.location.reload()
   }
 }

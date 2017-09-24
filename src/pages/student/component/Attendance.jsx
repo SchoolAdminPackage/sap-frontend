@@ -8,7 +8,7 @@ export default class Component extends React.Component {
   constructor (props) {
     super(props)
 
-    fetch('http://35.3.9.34:8080/query/allAttendanceEvents', {
+    fetch('http://66.175.211.152/query/allAttendanceEvents', {
       method: 'post',
       body: JSON.stringify({
         id: 1

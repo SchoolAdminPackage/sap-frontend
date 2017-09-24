@@ -73,7 +73,7 @@ export default class Main extends React.Component {
   callback = (data) => {
     if (window.localStorage.setupStage === '1') {
       for (let info of processText(data)) {
-        fetch('http://35.3.9.34:8080/create/student', {
+        fetch('http://66.175.211.152/create/student', {
           method: 'post',
           body: JSON.stringify({
             firstname: info[0],
@@ -85,7 +85,7 @@ export default class Main extends React.Component {
       }
     } else if (window.localStorage.setupStage === '2') {
       for (let info of processText(data)) {
-        fetch('http://35.3.9.34:8080/create/teacher', {
+        fetch('http://66.175.211.152/create/teacher', {
           method: 'post',
           body: JSON.stringify({
             firstname: info[0],
@@ -98,7 +98,7 @@ export default class Main extends React.Component {
     } else if (window.localStorage.setupStage === '3') {
     } else if (window.localStorage.setupStage === '4') {
       for (let info of processText(data)) {
-        fetch('http://35.3.9.34:8080/create/course', {
+        fetch('http://66.175.211.152/create/course', {
           method: 'post',
           body: JSON.stringify({
             title: info[0],
@@ -110,7 +110,7 @@ export default class Main extends React.Component {
       }
     } else if (window.localStorage.setupStage === '5') {
       for (let info of processText(data)) {
-        fetch('http://35.3.9.34:8080/create/course', {
+        fetch('http://66.175.211.152/create/course', {
           method: 'post',
           body: JSON.stringify({
             id: info[0],
