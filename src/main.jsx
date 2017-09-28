@@ -13,6 +13,7 @@ import Login from './pages/login/index.jsx'
 if (!window.localStorage.layout) {
   window.localStorage.layout = 'login'
 }
+ // window.localStorage.layout = 'teacher'
 
 let Component
 switch (window.localStorage.layout) {
