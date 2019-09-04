@@ -24,7 +24,7 @@
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0",
+    "webpack-dev-server": "^3.1.11",
     "webpack-merge": "^4.1.0"
   }
 }
